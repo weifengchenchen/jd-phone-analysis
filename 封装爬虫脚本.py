@@ -9,6 +9,16 @@ from spider import JDSpider
 import pandas as pd
 from drop_empty import drop
 
-spider=JDSpider(csv_filename="IPhone 16 Pro Max.csv",url="https://item.jd.com/100118874245.html")
 
-drop("IPhone 16 Pro Max.csv")
+
+url_list={}
+for i in url_list:
+    spider=JDSpider(csv_filename=i,url=url_list[i])
+    spider.crawl_comments(17,"好评")
+    time.sleep(10)
+    spider.crawl_comments(18,"中评")
+    time.sleep(10)
+    spider.crawl_comments(19,"差评")
+
+#
+# drop("IPhone 16 Pro Max.csv")
