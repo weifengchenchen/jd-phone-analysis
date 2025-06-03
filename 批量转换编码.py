@@ -15,7 +15,6 @@ for csv_file in glob.glob('C:\\Users\\16075\\Desktop\\分析报告\\数据\\*.cs
         # 写入ANSI编码文件
         with open(csv_file, 'w', encoding=target_encoding, errors='replace') as f:
             f.write(content)
-
         print(f"转换成功: {csv_file}")
     except Exception as e:
         print(f"转换失败 {csv_file}: {str(e)}")
