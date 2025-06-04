@@ -1,4 +1,5 @@
 {
     "python.defaultInterpreterPath": "C:\\Users\\16075\\AppData\\Local\\Programs\\Python\\Python38\\python.exe",
-    "python.analysis.autoFormatStrings": true
+    "python.analysis.autoFormatStrings": true,
+    "git.enableSmartCommit": true
 }
