@@ -27,7 +27,6 @@ class JDSpider:
 
             wait = self.dp.listen.wait()
             json_data = wait.response.body
-
             try:
                 Error=json_data['result']
             except KeyError:
@@ -51,13 +50,3 @@ class JDSpider:
         print(f"{comment_type}爬取完成")
 
 
-# 使用示例
-if __name__ == "__main__":
-    spider = JDSpider("comments.csv", "https://item.jd.com/100118874245.html")
-
-    # 只需调用同一个方法，传入不同参数
-    spider.crawl_comments(17, "好评")
-    # spider.crawl_comments(18, "中评")
-    spider.crawl_comments(19, "差评")
-
-    spider.dp.close()  # 关闭浏览器
