@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("{{ url_for('static', filename='images/background.jpg') }}"); /* 从 static 文件夹引用 photo 文件夹 */
+    background-size: cover; /* 使背景图片覆盖整个页面 */
+    background-position: center; /* 背景居中 */
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+a {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+}

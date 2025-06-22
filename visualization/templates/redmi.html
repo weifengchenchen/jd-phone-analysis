@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>苹果数据可视化</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Microsoft YaHei', sans-serif;
+            background-image: url("{{ url_for('static', filename='images/background.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            color: white;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景，提高文字可读性 */
+            padding: 20px;
+        }
+        
+        .gradient-title {
+            font-size: 3em;
+            text-align: center;
+            background: linear-gradient(90deg, #0000ff, #00ff00, #ff0000, #800080);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        img {
+            max-width: 100%; /* 限制图片最大宽度为容器宽度 */
+            height: auto; /* 保持图片的纵横比 */
+            display: block; /* 使图片在新行显示 */
+            margin: 20px auto; /* 图片居中并添加上下间距 */
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="gradient-title">红米数据可视化</h1>
+        
+        <!-- 在这里放置苹果的可视化内容 -->
+        <img src="{{ url_for('static', filename='images/top_words_redmi.png') }}" alt="小米数据可视化"> <!-- 示例图片 -->
+        
+        <div class="nav-links">
+            <a href="/dashboard">返回仪表盘</a>
+        </div>
+    </div>
+</body>
+</html>
