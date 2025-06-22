@@ -54,3 +54,6 @@ venv\Scripts\activate    # Windows
 # 3. 安装依赖
 pip install -r requirements.txt
 
+# 4. 可视化运行
+
+python .\visualization\app.py
