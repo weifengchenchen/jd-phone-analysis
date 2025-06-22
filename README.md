@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 京东手机数据爬取与分析大屏
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
@@ -52,3 +53,4 @@ venv\Scripts\activate    # Windows
 
 # 3. 安装依赖
 pip install -r requirements.txt
+
